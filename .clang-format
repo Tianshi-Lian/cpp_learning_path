@@ -1,0 +1,17 @@
+---
+# options: https://clang.llvm.org/docs/ClangFormatStyleOptions.html
+BasedOnStyle: LLVM
+IndentWidth: 4
+AccessModifierOffset: 0
+ColumnLimit: 128
+UseTab: Never
+UseCRLF: false
+
+AlignConsecutiveMacros: Consecutive
+AlignTrailingComments: true
+AllowShortIfStatementsOnASingleLine: false
+AlwaysBreakAfterReturnType: None
+AlwaysBreakTemplateDeclarations : Yes
+PointerAlignment: Left
+SpaceAfterCStyleCast: false # does (int) x instead of (int)x
+SpacesBeforeTrailingComments: 3

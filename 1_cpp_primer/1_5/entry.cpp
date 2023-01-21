@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "sales_item.h"
+#include "vendor/sales_item.h"
 
 int main() {
     // This used a fixed number of reads to allow us to run all the code here in one go.

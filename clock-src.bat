@@ -1,0 +1,1 @@
+cloc --not-match-d="(book_src|vendor|bin)" .

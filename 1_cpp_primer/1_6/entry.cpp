@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "sales_item.h"
+#include "vendor/sales_item.h"
 
 int main() {
     // Exercise 1.25

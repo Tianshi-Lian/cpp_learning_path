@@ -1,23 +1,26 @@
+#include <cstdlib>
+#include <iostream>
+
 int main() {
 
     // ! 2.3.1
     {
         int ival = 1024;
-        int &refVal = ival;
-        //int &relVal2; // Err: must be initialized
+        int& refVal = ival;
+        // int &relVal2; // Err: must be initialized
         refVal = 2;
         int ii = refVal;
-        int &refVal3 = refVal; // Gets bound to ival
-        int i = refVal; // Initialised to the value of ival
+        int& refVal3 = refVal;   // Gets bound to ival
+        int i = refVal;          // Initialised to the value of ival
 
-        int x = 1024, x2 = 2048;  // both int objects
-        int &r = x, r2 = x2;      // r is ref to x object
-        int x3 = 1024, &rx = x3;  // x3 is int object, rx is ref to x3
-        int &r3 = x3, &r4 = x2;   // r3 is ref to x3 object, r4 is ref to x2 object
+        int x = 1024, x2 = 2048;   // both int objects
+        int &r = x, r2 = x2;       // r is ref to x object
+        int x3 = 1024, &rx = x3;   // x3 is int object, rx is ref to x3
+        int &r3 = x3, &r4 = x2;    // r3 is ref to x3 object, r4 is ref to x2 object
 
-        //int &refVal4 = 10; // Err: must refer to an object
+        // int &refVal4 = 10; // Err: must refer to an object
         double dval = 3.14;
-        //int &refVal5 = dval; // Err: must refer to same base type
+        // int &refVal5 = dval; // Err: must refer to same base type
     }
 
     // Exercise 2.15
@@ -53,6 +56,117 @@ int main() {
     */
 
     // ! 2.3.2
+    {
+        int *ip1, *ip2;    // two pointers to int
+        double dp, *dp2;   // dp2 is pointer to double
+
+        int ival = 42;
+        int* p = &ival;   // p holds the address of ival to "point" to ival
+
+        double dval;
+        double* pd = &dval;
+        double* pd2 = pd;
+        // int *pi = pd; // error: pointers pi & pd are different types
+        // int *pi = &dval; // error: can only assign objects of the same type
+
+        std::cout << *p;
+
+        *p = 0;
+        std::cout << p;
+
+        // null pointer initialization
+        int* n1 = nullptr;
+        int* n2 = 0;
+        int* n3 = NULL;
+
+        int zero = 0;
+        // int *z = zero; // error: can't assign int to a point (even 0)
+    }
+    {
+        int i = 42;
+        int* pi = 0;     // initialized but addresses no object
+        int* pi2 = &i;   // initialized and holds address of i
+        int* pi3;        // unitialized within block scope
+        pi3 = pi2;       // pi3 and pi2 address the same object (i)
+        pi2 = 0;         // pi2 now addresses no object (but pi3 still does)
+    }
+    {
+        int ival = 1024;
+        int* pi = 0;
+        int* pi2 = &ival;
+        if (pi) {
+            std::cout << "pi valid" << std::endl;
+        }
+        if (pi2) {
+            std::cout << "pi2 valid" << std::endl;
+        }
+    }
+    {
+        double obj = 3.14, *pd = &obj;
+        void* pv = &obj;  // obj can be any type
+        pv = pd;          // pv can hold a pointer to any type
+    }
+    std::cout << std::endl << std::endl;
+
+    // Exercise 2.18
+    {
+        int value_1 = 10;
+        int value_2 = 5;
+        int* pointer_1 = nullptr;
+        pointer_1 = &value_1;
+        *pointer_1 = 20;
+        pointer_1 = &value_2;
+        std::cout << "value_1: " << value_1 << " value_2: " << value_2 << std::endl;
+    }
+    std::cout << std::endl << std::endl;
+
+    // Exercise 2.19
+    /*
+    references are not objects, they are just an alias to an object, a point is an object itself which holds an address
+    pointers do not have to be initialized and can be left in a null or invalid state
+    pointers can be reassigned to point to a new object, references cannot
+    */
+
+    // Exercise 2.20
+    /*
+    creates an int object with value 42 called i
+    creates a pointer to i called p1
+    sets the value of i to 42*42 by derefencing p1 to assign, then derefencing p1 twice to multiply the values.
+    */
+
+    // Exercise 2.21
+    /*
+    int i = 0;
+
+    (a) double* dp = &i;
+    invalid, a pointer cannot hold address of an object with a different type
+
+    (b) int *ip = i;
+    invalid, a pointer cannot be initialized to the value of an object
+
+    (c) int *p = &i;
+    valid, initializes p to hold the address of i
+    */
+
+    // Exercise 2.22
+    /*
+    if (p) // checks if p holds a valid address
+    if (*p) // checks if the value of p is not 0
+    */
+
+    // Exercise 2.23
+    /*
+    not really
+    you can check if it points to something through if (p), but that really just checks that it's holding an
+    address. the object at the other end still might not be valid or correct, for example if p was never initialized
+    it could just point to a random piece of memory
+    */
+
+    // Exercise 2.24
+    /*
+    i is an object of type int
+    void* can point to an object of any type, lp can only point to an object of type long
+    */
 
     return 0;
 }

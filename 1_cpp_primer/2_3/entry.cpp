@@ -103,8 +103,8 @@ int main() {
     }
     {
         double obj = 3.14, *pd = &obj;
-        void* pv = &obj;  // obj can be any type
-        pv = pd;          // pv can hold a pointer to any type
+        void* pv = &obj;   // obj can be any type
+        pv = pd;           // pv can hold a pointer to any type
     }
     std::cout << std::endl << std::endl;
 
@@ -166,6 +166,42 @@ int main() {
     /*
     i is an object of type int
     void* can point to an object of any type, lp can only point to an object of type long
+    */
+
+    // ! 2.3.3
+    {
+        int i = 1024, *pi = &i, &ri = i;
+
+        int** ppi = &pi;      // pointer to a pointer to i
+        int*** pppi = &ppi;   // pointer to a pointer to a pointer to i
+
+        std::cout << "The value of i:\n"
+                  << "direct: " << i << "\n"
+                  << "indirect: " << *pi << "\n"
+                  << "double-indirect:" << **ppi << std::endl;
+    }
+    {
+        int i = 42;
+        int* p;         // pointer
+        int *&r = p;    // reference to a pointer
+        r = &i;         // r is reference to a pointer so this makes p point to i
+        *r = 0;         // deferencing the reference works as expected and changes i
+    }
+    std::cout << std::endl << std::endl;
+
+    // Exercise 2.25
+    /*
+    (a) int* ip, i, &r = i;
+    pointer to int, int object, reference to i
+    null, undefined, same as i
+
+    (b) int i, *ip = 0;
+    int object, pointer to int
+    undefined, null
+
+    (c) int* ip, ip2;
+    pointer to int, int object
+    undefined, undefined
     */
 
     return 0;

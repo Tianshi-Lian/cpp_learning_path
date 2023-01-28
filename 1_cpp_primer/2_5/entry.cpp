@@ -127,5 +127,58 @@ int main() {
         const auto j2 = i, &k2 = i;   // const int, const int&
     }
 
+    // ! 2.5.3
+    {
+        const int ci = 0, &cj = ci;
+        decltype(ci) x = 0;   // x has type const int
+        decltype(cj) y = x;   // y has type const int& and is bound to x
+        // decltype(cj) z;    // error: z is a ref so must be intitialized
+
+        int i = 42, *pi = &i, &ri = i;
+        decltype(ri + 0) b;   // interprets int from expression, b is uninitialized int
+        // decltype(*pi) c;   // error: c evalutes as int& and must be initialized
+
+        // decltype((i)) d; // error: d is int& due to (i) being an evaluated expression returning a ref
+        decltype(i) e;   // e is an unitialized int
+    }
+
+    // Exercise 2.36
+    /*
+    int a = 3, b = 4;
+
+    decltype(a) c = a;
+    decltype((b)) d = a;
+    ++c;
+    ++d;
+
+    int a = 4
+    int b = 4
+    int c = 4
+    int& d = 4
+    */
+
+    // Exercise 2.37
+    /*
+    int a = 3, b = 4;
+
+    decltype(a) c = a;
+    int
+
+    decltype(a = b) d = a;
+    int&
+    */
+
+    // Exercise 2.38
+    /*
+    int a = 5;
+
+    auto b = a;
+    decltype(a) c;
+
+    auto d = a;
+    decltype(c = a) e;
+
+    */
+
     return 0;
 }

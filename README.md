@@ -22,7 +22,7 @@ This repository contains all the code I have personally written while following 
 - **Conan** - https://conan.io/ - a cross platform package manager for C and C++. This utilizes modern CMake to make handling packages and modules easy. Packages can be handled locally or privately and some of the later CMake and C++ resources rely on it for managing very large, modular projects.
 
 ## Path
-It is recommended to start with C++ Primer and then use LearnCpp for revision or repetition every couple of chapters. It's also recommended to start with C++ for a few chapters until you are comfortable writing small, multiple-file programs and then swapping to CMake for at least the first 2-3 resources. You can then continue the C++ path while utilising the knowledge learned with CMake. After that it is up to the reader to decide when and how much time to invest into learning CMake, though I would recommend completing at least up to, or including, `Professional CMake` before starting `C++ In Action` and completing `Git, CMake, Conan` before starting `Large-Scale C++ Process and Architecture` so you can apply the learned knowledge during these books.
+It is recommended to start with C++ Primer and then use LearnCpp for revision or repetition every couple of chapters. It's also recommended to start with C++ for a few chapters until you are comfortable writing small, multiple-file programs and then swapping to CMake for at least up to and including `An Introduction to Modern CMake`. You can then continue the C++ path while utilising the knowledge learned with CMake. After that it is up to the reader to decide when and how much time to invest into learning CMake, though I would recommend completing at least up to, or including, `Professional CMake` before starting `C++ In Action` and completing `Git, CMake, Conan` before starting `Large-Scale C++ Process and Architecture` so you can apply the learned knowledge during these books.
 
 The "State" column below shows my personal progress with this path, where:
 - C = Complete
@@ -33,44 +33,45 @@ The "State" column below shows my personal progress with this path, where:
 ### **C++**
 |Order|State|Resource|Link|
 |---|---|---|---|
-|  0 |I| LearnCpp | https://www.learncpp.com/
-|  1 |I| [C++ Primer 5th ed](cpp/01_cpp_primer)
-|  2 | | Effective C++ 3rd ed
-|  3 | | More Effective C++ 1st ed
-|  4 | | Effective STL 1st ed
-|  5 | | Exceptional C++ 1st ed
-|  6 | | More Exceptional C++ 1st ed
-|  7 | | Exceptional C++ Style 1st ed
-|  8 | | C++ Coding Standards 1st ed
-|  9 | | Design Patterns 1st ed
-| 10 | | Modern C++ Design, Generics & Patterns 1st ed
-| 11 | | C++ In Action Web ed
-| 12 |P| Embracing Modern C++ Safely 
-| 13 | | Effective Modern C++ 1st ed 
-| 14 |P| C++ Move Semantics The Complete Guide
-| 15 |P| C++17 The Complete Guide
-| 16 |P| C++ Templates The Complete Guide
-| 17 | | C++ Concurrency In Action 1st ed
-| 18 |P| C++20 The Complete Guide
-| 19 |P| Software Architecture with C++
-| 20 |P| C++ High Performance
-| 21 |P| Beautiful C++
-| 22 |P| Large-Scale C++ Process and Architecture Vol 1
-| 23 |P| Large-Scale C++ Process and Architecture Vol 2
-| 24 |P| Large-Scale C++ Process and Architecture Vol 3
+|  0|I| LearnCpp | https://www.learncpp.com/
+|  1|I| [C++ Primer 5th ed](cpp/01_cpp_primer)
+|  2| | Effective C++ 3rd ed
+|  3| | More Effective C++ 1st ed
+|  4| | Effective STL 1st ed
+|  5| | Exceptional C++ 1st ed
+|  6| | More Exceptional C++ 1st ed
+|  7| | Exceptional C++ Style 1st ed
+|  8| | C++ Coding Standards 1st ed
+|  9| | Design Patterns 1st ed
+| 10| | Modern C++ Design, Generics & Patterns 1st ed
+| 11| | C++ In Action Web ed
+| 12|P| Embracing Modern C++ Safely 
+| 13| | Effective Modern C++ 1st ed 
+| 14|P| C++ Move Semantics The Complete Guide
+| 15|P| C++17 The Complete Guide
+| 16|P| C++ Templates The Complete Guide
+| 17| | C++ Concurrency In Action 1st ed
+| 18|P| C++20 The Complete Guide
+| 19|P| Software Architecture with C++
+| 20|P| C++ High Performance
+| 21|P| Beautiful C++
+| 22|P| Large-Scale C++ Process and Architecture Vol 1
+| 23|P| Large-Scale C++ Process and Architecture Vol 2
+| 24|P| Large-Scale C++ Process and Architecture Vol 3
 
 <a name="path_cmake"/></a>
 ### **CMake**
 |Order|State|Resource|Link|
 |---|---|---|---|
-| 1 | | The Ultimate CMake Quick Start   | https://www.youtube.com/watch?v=YbgH7yat-Jo
-| 2 | | An Introduction to Modern CMake  | https://cliutils.gitlab.io/modern-cmake/
-| 3 | | LLVM CMake Primer                | https://llvm.org/docs/CMakePrimer.html
-| 4 | | Modern CMake for Modular Design  | https://www.youtube.com/watch?v=eC9-iRN2b04
-| 5 | | Effective CMake                  | https://www.youtube.com/watch?v=bsXLMQ6WgIk
-| 6 | | Professional CMake               | https://crascit.com/professional-cmake/
-| 7 | | Git, CMake, Conan                | https://www.youtube.com/watch?v=6sWec7b0JIc
-| 8 | | CMake & Conan 3 Years Later      | https://www.youtube.com/watch?v=mrSwJBJ-0z8
+| 1|I| Intro to CMake                   | https://www.youtube.com/watch?v=HPMvU64RUTY
+| 2| | The Ultimate CMake Quick Start   | https://www.youtube.com/watch?v=YbgH7yat-Jo
+| 3| | An Introduction to Modern CMake  | https://cliutils.gitlab.io/modern-cmake/
+| 4| | LLVM CMake Primer                | https://llvm.org/docs/CMakePrimer.html
+| 5| | Modern CMake for Modular Design  | https://www.youtube.com/watch?v=eC9-iRN2b04
+| 6| | Effective CMake                  | https://www.youtube.com/watch?v=bsXLMQ6WgIk
+| 7| | Professional CMake               | https://crascit.com/professional-cmake/
+| 8| | Git, CMake, Conan                | https://www.youtube.com/watch?v=6sWec7b0JIc
+| 9| | CMake & Conan 3 Years Later      | https://www.youtube.com/watch?v=mrSwJBJ-0z8
 
 <td></tr>
 </table>

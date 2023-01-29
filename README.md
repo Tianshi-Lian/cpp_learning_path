@@ -63,15 +63,15 @@ The "State" column below shows my personal progress with this path, where:
 ### **CMake**
 |Order|State|Resource|Link|
 |---|---|---|---|
-| 1|I| Intro to CMake                   | https://www.youtube.com/watch?v=HPMvU64RUTY
-| 2| | The Ultimate CMake Quick Start   | https://www.youtube.com/watch?v=YbgH7yat-Jo
-| 3| | An Introduction to Modern CMake  | https://cliutils.gitlab.io/modern-cmake/
-| 4| | LLVM CMake Primer                | https://llvm.org/docs/CMakePrimer.html
-| 5| | Modern CMake for Modular Design  | https://www.youtube.com/watch?v=eC9-iRN2b04
-| 6| | Effective CMake                  | https://www.youtube.com/watch?v=bsXLMQ6WgIk
-| 7| | Professional CMake               | https://crascit.com/professional-cmake/
-| 8| | Git, CMake, Conan                | https://www.youtube.com/watch?v=6sWec7b0JIc
-| 9| | CMake & Conan 3 Years Later      | https://www.youtube.com/watch?v=mrSwJBJ-0z8
+| 1|C| [Intro to CMake](cmake/01_intro_to_cmake) | https://www.youtube.com/watch?v=HPMvU64RUTY
+| 2| | The Ultimate CMake Quick Start | https://www.youtube.com/watch?v=YbgH7yat-Jo
+| 3| | An Introduction to Modern CMake | https://cliutils.gitlab.io/modern-cmake/
+| 4| | LLVM CMake Primer | https://llvm.org/docs/CMakePrimer.html
+| 5| | Modern CMake for Modular Design | https://www.youtube.com/watch?v=eC9-iRN2b04
+| 6| | Effective CMake | https://www.youtube.com/watch?v=bsXLMQ6WgIk
+| 7| | Professional CMake | https://crascit.com/professional-cmake/
+| 8| | Git, CMake, Conan | https://www.youtube.com/watch?v=6sWec7b0JIc
+| 9| | CMake & Conan 3 Years Later | https://www.youtube.com/watch?v=mrSwJBJ-0z8
 
 <td></tr>
 </table>

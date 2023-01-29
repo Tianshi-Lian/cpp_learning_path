@@ -13,7 +13,7 @@ This repository contains all the code I have personally written while following 
 - **Conan** - https://conan.io/ - a cross platform package manager for C and C++. This utilizes modern CMake to make handling packages and modules easy. Packages can be handled locally or privately and some of the later CMake and C++ resources rely on it for managing very large, modular projects.
 
 ## Path
-It is recommended to start with C++ Primer and then use LearnCpp for revision or repition every couple of chapters. It's also recommended to start with C++ for a few chapters until you are comfortable writing small, multiple-file programs and then swapping to CMake for at least the first 2-3 resources and then continue the C++ path while utilising the knowledge learned with CMake.
+It is recommended to start with C++ Primer and then use LearnCpp for revision or repetition every couple of chapters. It's also recommended to start with C++ for a few chapters until you are comfortable writing small, multiple-file programs and then swapping to CMake for at least the first 2-3 resources and then continue the C++ path while utilising the knowledge learned with CMake.
 
 The "State" column below shows my personal progress with this path, where:
 - C = Complete

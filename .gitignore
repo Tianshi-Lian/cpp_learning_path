@@ -1,3 +1,6 @@
-**.exe
+
 book_src/
+
+**.exe
 **/bin/**
+**/.cache/**

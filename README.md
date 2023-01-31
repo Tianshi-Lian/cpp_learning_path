@@ -65,8 +65,8 @@ The "State" column below shows my personal progress with this path, where:
 |Order|State|Resource|Link|
 |---|---|---|---|
 | 1|C| [Intro to CMake](cmake/01_intro_to_cmake) | https://www.youtube.com/watch?v=HPMvU64RUTY
-| 2| | The Ultimate CMake Quick Start | https://www.youtube.com/watch?v=YbgH7yat-Jo
-| 3| | An Introduction to Modern CMake | https://cliutils.gitlab.io/modern-cmake/
+| 2|C| [The Ultimate CMake Quick Start](cmake/02_ultimate_quick_start) | https://www.youtube.com/watch?v=YbgH7yat-Jo
+| 3|I| An Introduction to Modern CMake | https://cliutils.gitlab.io/modern-cmake/
 | 4| | LLVM CMake Primer | https://llvm.org/docs/CMakePrimer.html
 | 5| | Modern CMake for Modular Design | https://www.youtube.com/watch?v=eC9-iRN2b04
 | 6| | Effective CMake | https://www.youtube.com/watch?v=bsXLMQ6WgIk

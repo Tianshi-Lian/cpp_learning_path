@@ -1,15 +1,11 @@
 @echo off
 
-if not exist "bin/" (
-    mkdir bin
+if not exist "build/dist/" (
+    mkdir build\dist
 )
 
-pushd bin
+if not exist "build/build.ninja" (
+    cmake -S ./ -B ./build -G "Ninja" -D CMAKE_CXX_COMPILER=g++
+)
 
-    if not exist "Ninja.build" (
-        cmake -G "Ninja" -D CMAKE_CXX_COMPILER=g++ ../
-    )
-
-    ninja
-
-popd
+cmake --build ./build

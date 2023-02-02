@@ -1,6 +1,6 @@
 @echo off
 
-pushd bin
+pushd build\dist
 
     program
 

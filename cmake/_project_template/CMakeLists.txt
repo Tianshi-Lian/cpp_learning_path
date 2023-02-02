@@ -21,4 +21,4 @@ if(ENABLE_PCH)
     target_precompile_headers(project_options INTERFACE <map> <memory> <string> <vector> <utility>)
 endif()
 
-add_subdirectory(src)
+add_subdirectory(app)

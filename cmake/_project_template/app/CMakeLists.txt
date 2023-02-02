@@ -2,11 +2,11 @@
 set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/dist)
 
 add_executable(program
-    main.cpp
+    src/main.cpp
 )
 target_link_libraries(program
     PRIVATE project_options project_warnings
 )
 target_include_directories(program
-    PRIVATE ../include
+    PUBLIC include
 )

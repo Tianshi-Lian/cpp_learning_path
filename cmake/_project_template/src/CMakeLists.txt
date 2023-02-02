@@ -5,5 +5,8 @@ add_executable(program
     main.cpp
 )
 target_link_libraries(program
-    PUBLIC project_options project_warnings
+    PRIVATE project_options project_warnings
+)
+target_include_directories(program
+    PRIVATE ../include
 )

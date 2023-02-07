@@ -28,9 +28,11 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-# Enable link time optimisation by default
-include(CheckIPOSupported)
-check_ipo_supported(RESULT result)
-if(result)
-    set(CMAKE_INTERPROCEDURAL_OPTIMIZATION ON)
+# Enable link time optimisation by default for release
+if(${CMAKE_BUILD_TYPE} STREQUAL "Release")
+    include(CheckIPOSupported)
+    check_ipo_supported(RESULT result)
+    if(result)
+        set(CMAKE_INTERPROCEDURAL_OPTIMIZATION ON)
+    endif()
 endif()

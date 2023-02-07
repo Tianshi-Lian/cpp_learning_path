@@ -8,17 +8,6 @@ project(myproject
 )
 include(cmake/standard_project_settings.cmake)
 
-# Disable compiler extensions to ensure compliance with ISO C++ standards
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_EXTENSIONS OFF)
-
-# Enable link time optimisation by default
-include(CheckIPOSupported)
-check_ipo_supported(RESULT result)
-if(result)
-    set(CMAKE_INTERPROCEDURAL_OPTIMIZATION ON)
-endif()
-
 # Set default compile features
 add_library(project_options INTERFACE)
 target_compile_features(project_options INTERFACE cxx_std_11)

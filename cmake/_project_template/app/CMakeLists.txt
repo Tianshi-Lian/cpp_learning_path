@@ -10,3 +10,6 @@ target_link_libraries(program
 target_include_directories(program
     PUBLIC include
 )
+set_target_properties(program PROPERTIES
+    LINK_WHAT_YOU_USE ON
+)

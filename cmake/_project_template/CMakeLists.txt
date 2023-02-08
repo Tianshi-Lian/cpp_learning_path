@@ -1,7 +1,10 @@
 cmake_minimum_required(VERSION 3.25)
 
+set(APP_PROJECT_NAME project)
+set(APP_LIBS_DIR libs)
+
 # Main project settings
-project(myproject
+project(${APP_PROJECT_NAME}
     VERSION 0.0.1
     DESCRIPTION "New project"
     LANGUAGES CXX
@@ -26,4 +29,8 @@ if(ENABLE_PCH)
     target_precompile_headers(project_options INTERFACE <map> <memory> <string> <vector> <utility>)
 endif()
 
+# Libraries
+add_subdirectory(libs/lib)
+
+# Application
 add_subdirectory(app)

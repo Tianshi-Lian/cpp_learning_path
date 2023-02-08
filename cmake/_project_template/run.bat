@@ -1,3 +1,3 @@
 @echo off
 
-.\build\dist\program
+.\build\dist\app

@@ -1,0 +1,23 @@
+---
+Checks: "*,
+        -abseil-*,
+        -altera-*,
+        -android-*,
+        -fuchsia-*,
+        -google-*,
+        -llvm*,
+        -zircon-*,
+        -cppcoreguidelines-non-private-member-variables-in-classes,
+        -cppcoreguidelines-avoid-non-const-global-variables,
+        -cppcoreguidelines-pro-type-vararg,
+        -hicpp-vararg,
+        -misc-non-private-member-variables-in-classes,
+        -modernize-use-trailing-return-type,
+        -readability-avoid-const-params-in-decls,
+        -readability-else-after-return,
+        -readability-static-accessed-through-instance,
+        -readability-uppercase-literal-suffix,
+"
+WarningsAsErrors: true
+HeaderFilterRegex: ''
+FormatStyle: none

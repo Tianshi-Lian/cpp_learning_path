@@ -1,0 +1,5 @@
+Diagnostics:
+  UnusedIncludes: Strict
+CompileFlags:
+  CompilationDatabase: build/
+  Add: -ferror-limit=0 # This will show unlimited errors, set to a specific number to show that many errors at a time

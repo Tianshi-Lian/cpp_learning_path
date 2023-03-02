@@ -14,3 +14,4 @@ set_compiler_warnings(project_warnings)
 
 # Projects
 add_subdirectory(00-project-template)
+add_subdirectory(01-basics)

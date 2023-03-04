@@ -48,6 +48,31 @@ section_2()
 int
 section_3()
 {
+    int x;
+    double width;
+
+    int a, b;
+
+    /**
+     * 1.
+     * Any information which can be used digitally
+     *
+     * 2.
+     * A piece of data
+     *
+     * 3.
+     * A named value
+     *
+     * 4.
+     * The name given to a piece of data(variable)
+     *
+     * 5.
+     * The way a piece of data should be interpreted, such as number or character
+     *
+     * 6.
+     * A whole, decimal number
+     */
+
     return 0;
 }
 

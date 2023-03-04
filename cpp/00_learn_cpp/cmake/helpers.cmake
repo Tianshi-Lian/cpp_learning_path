@@ -66,6 +66,7 @@ function(set_compiler_warnings project_name)
 		# many of these learning chatpers will have unused lines of code
 		# -Wunused
 		-Wno-unused-variable
+		-Wno-unused-but-set-variable
 	)
 
 	set(GCC_WARNINGS

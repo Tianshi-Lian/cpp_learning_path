@@ -161,11 +161,36 @@ section_5()
     return 0;
 }
 
-std::vector<std::function<int()>> sections = { section_1, section_2, section_3, section_4, section_5 };
+void
+do_nothing(int&)
+{
+}
+
+int
+section_6()
+{
+    int x;
+    do_nothing(x);
+    std::cout << x << std::endl; // NOLINT
+
+    /**
+     * 1.
+     * A variable which has never been assigned a value. The value it does have is junk left over at the memory address it was
+     * given. Using it is undefined behaviour.
+     *
+     * 2.
+     * Undefined behaviour is doing something which the C++ specification does not describe how it should work. The can lead to
+     * all manner of issues, errors, crashes and "weirdness" as there is literally no definition for how it should function.
+     */
+
+    return 0;
+}
 
 int
 main(int argc, char* argv[])
 {
+    const std::vector<std::function<int()>> sections = { section_1, section_2, section_3, section_4, section_5, section_6 };
+
     auto args = std::span(argv, std::size_t(argc));
 
     if (args.size() > 1) {

@@ -187,9 +187,30 @@ section_6()
 }
 
 int
+section_7()
+{
+    /**
+     * 1.
+     * correct
+     * incorrect, starts with underscore
+     * incorrect, starts with uppercase
+     * invalid, contains whitespace
+     * incorrect, starts with uppercase
+     * invalid, uses keyword
+     * correct
+     * invalid, starts with number,
+     * correct
+     *
+     */
+
+    return 0;
+}
+
+int
 main(int argc, char* argv[])
 {
-    const std::vector<std::function<int()>> sections = { section_1, section_2, section_3, section_4, section_5, section_6 };
+    const std::vector<std::function<int()>> sections = { section_1, section_2, section_3, section_4,
+                                                         section_5, section_6, section_7 };
 
     auto args = std::span(argv, std::size_t(argc));
 

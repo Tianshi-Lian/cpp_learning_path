@@ -76,7 +76,46 @@ section_3()
     return 0;
 }
 
-std::array<std::function<int()>, 3> sections = { section_1, section_2, section_3 };
+int
+section_4()
+{
+    int width;
+    width = 5;
+
+    int height;
+    height = 3;
+    height = 7;
+
+    int b = 5;     // copy initialization
+    int c(6);      // direct initialization
+    int d{ 7 };    // direct list initialization - preferred in c++11 onwards
+    int e = { 8 }; // copy list initialization
+    int f{};       // value initialization
+
+    int i = 5, j = 6;
+    int k(7), l(8);
+    int m{ 9 }, n{ 10 };
+    int o = { 11 }, p = { 12 };
+    int q{}, r{};
+
+    [[maybe_unused]] int x; // c++17 hint to the compiler it's okay this is unused
+
+    /**
+     * 1.
+     * Initialization has to be done at creation, assignment is always a copy overwrite at any point
+     *
+     * 2.
+     * Direct list initialization
+     *
+     * 3.
+     * Default initialization is when no value is assigned at creation, the value is undefined. Should be avoided.
+     * Value initialization is explicitly initializing with a known, default value, usually 0. Better practice.
+     */
+
+    return 0;
+}
+
+std::vector<std::function<int()>> sections = { section_1, section_2, section_3, section_4 };
 
 int
 main(int argc, char* argv[])
@@ -90,6 +129,7 @@ main(int argc, char* argv[])
             return -1;
         }
         else {
+            std::cout << "Running section: " << section_to_run << std::endl;
             return std::invoke(sections.at(section_to_run - 1)); // Decrement for 0 indexing.
         }
     }

@@ -1,5 +1,6 @@
 ---
 # options: https://clang.llvm.org/docs/ClangFormatStyleOptions.html
+Language: Cpp
 BasedOnStyle: Mozilla
 IndentWidth: 4
 AccessModifierOffset: 0
@@ -8,12 +9,21 @@ UseTab: Never
 UseCRLF: false
 
 AlignAfterOpenBracket: BlockIndent
+AlignArrayOfStructures: Right
+AlignTrailingComments: true
+AllowAllArgumentsOnNextLine: true
+AllowAllParametersOfDeclarationOnNextLine: true
 AllowShortEnumsOnASingleLine: false
 AllowShortFunctionsOnASingleLine: false
-AlignTrailingComments: true
 AllowShortIfStatementsOnASingleLine: false
 AlwaysBreakTemplateDeclarations : Yes
+BinPackArguments: false
+BinPackParameters: false
 BreakBeforeBraces: Stroustrup
+BreakConstructorInitializers: BeforeComma
 ContinuationIndentWidth: 4
+InsertBraces: true
+PackConstructorInitializers: NextLine
 PointerAlignment: Left
+SortIncludes: CaseSensitive
 SpaceAfterCStyleCast: false

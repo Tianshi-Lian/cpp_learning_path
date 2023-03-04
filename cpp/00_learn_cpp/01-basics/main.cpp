@@ -115,7 +115,53 @@ section_4()
     return 0;
 }
 
-std::vector<std::function<int()>> sections = { section_1, section_2, section_3, section_4 };
+int
+section_5()
+{
+
+    std::cout << "We can also print numbers using std::cout: ";
+    std::cout << 4 << std::endl;
+
+    int x{ 3 };
+    std::cout << "And also our variable x: ";
+    std::cout << x << std::endl;
+
+    std::cout << "Printing"
+              << " multiple"
+              << " parts "
+              << " is"
+              << " possible"
+              << " for "
+              << "concatenation" << std::endl;
+
+    std::cout << "Which allows printing the value x: " << x << " in one statement too" << std::endl;
+
+    std::cout << "We can avoid flushing the buffer from std::endl\nby using the special character \\n instead.\n";
+
+    int value{};
+    std::cin >> value;
+    std::cout << "You entered: " << value << "\n";
+
+    std::cout << "Enter two numbers separated by a single space: ";
+    int i{};
+    int j{};
+    std::cin >> i >> j;
+    std::cout << "You entered: " << i << " and " << j << "\n";
+
+    /**
+     * 1.
+     * a) outputs 0 and then exits
+     * b) outputs the value truncated to an integer and then exits
+     * c) outputs the value
+     * d) outputs 0 and then exits
+     * e) outputs maximum integer value and then exits
+     * f) outputs the numeric part and then exits
+     */
+
+    return 0;
+}
+
+std::vector<std::function<int()>> sections = { section_1, section_2, section_3, section_4, section_5 };
 
 int
 main(int argc, char* argv[])
@@ -136,6 +182,7 @@ main(int argc, char* argv[])
     else {
         for (auto& section : sections) {
             std::invoke(section);
+            std::cout << std::endl;
         }
     }
 }

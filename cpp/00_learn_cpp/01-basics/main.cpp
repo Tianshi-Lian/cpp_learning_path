@@ -216,10 +216,31 @@ section_8()
 }
 
 int
+section_9()
+{
+    std::cout << "Hello, again\n";
+    int x{ 5 };
+
+    std::cout << 1 + 2 << "\n";
+
+    std::cout << 2 * 3 + 4 / 5 << std::endl;
+
+    /**
+     * 1.
+     * a) 7
+     * b) 2
+     * c) 14
+     * d) 5
+     */
+
+    return 0;
+}
+
+int
 main(int argc, char* argv[])
 {
-    const std::vector<std::function<int()>> sections = { section_1, section_2, section_3, section_4,
-                                                         section_5, section_6, section_7, section_8 };
+    const std::vector<std::function<int()>> sections = { section_1, section_2, section_3, section_4, section_5,
+                                                         section_6, section_7, section_8, section_9 };
 
     auto args = std::span(argv, std::size_t(argc));
 
@@ -235,7 +256,7 @@ main(int argc, char* argv[])
         }
     }
     else {
-        for (auto& section : sections) {
+        for (const auto& section : sections) {
             std::invoke(section);
             std::cout << std::endl;
         }

@@ -260,10 +260,28 @@ section_10()
 }
 
 int
+section_11()
+{
+    std::cout << "Enter an integer: ";
+
+    int value{};
+    std::cin >> value;
+
+    std::cout << "Your number doubled is: " << value * 2 << "\n";
+
+    /**
+     * 1.
+     */
+    std::cout << "Your number tripled is: " << value * 3 << "\n";
+
+    return 0;
+}
+
+int
 main(int argc, char* argv[])
 {
-    const std::vector<std::function<int()>> sections = { section_1, section_2, section_3, section_4, section_5,
-                                                         section_6, section_7, section_8, section_9, section_10 };
+    const std::vector<std::function<int()>> sections = { section_1, section_2, section_3, section_4,  section_5, section_6,
+                                                         section_7, section_8, section_9, section_10, section_11 };
 
     auto args = std::span(argv, std::size_t(argc));
 

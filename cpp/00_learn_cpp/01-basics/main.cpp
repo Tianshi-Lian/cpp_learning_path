@@ -278,10 +278,38 @@ section_11()
 }
 
 int
+section_12()
+{
+    /**
+     * 1.
+     * Initialization is done at variable creation time, assignment can be done at any time
+     *
+     * 2.
+     * Undefined behaviour is when you do something which is not described/intended by the c++ specification
+     * It can lead to all manner of weird/unknown (or no) issues at any time during compilation or running the program
+     *
+     * 3.
+     */
+    int value_1{};
+    int value_2{};
+
+    std::cout << "Enter a number: ";
+    std::cin >> value_1;
+
+    std::cout << "Enter another number: ";
+    std::cin >> value_2;
+
+    std::cout << value_1 << " + " << value_2 << " = " << value_1 + value_2 << "\n";
+    std::cout << value_1 << " - " << value_2 << " = " << value_1 - value_2 << "\n";
+
+    return 0;
+}
+
+int
 main(int argc, char* argv[])
 {
-    const std::vector<std::function<int()>> sections = { section_1, section_2, section_3, section_4,  section_5, section_6,
-                                                         section_7, section_8, section_9, section_10, section_11 };
+    const std::vector<std::function<int()>> sections = { section_1, section_2, section_3, section_4,  section_5,  section_6,
+                                                         section_7, section_8, section_9, section_10, section_11, section_12 };
 
     auto args = std::span(argv, std::size_t(argc));
 

@@ -237,10 +237,33 @@ section_9()
 }
 
 int
+section_10()
+{
+    /**
+     * 1.
+     * Expression is something which does not execute on it's own but can be evaluated to a single result
+     * Statement is a single execution piece which can include expressions
+     *
+     * 2.
+     * a) statement
+     * b) statement with expression
+     * c) expression statement
+     * d) statement with expression
+     * e) expression statement
+     *
+     * 3.
+     * 5
+     * 4
+     * 0
+     */
+    return 0;
+}
+
+int
 main(int argc, char* argv[])
 {
     const std::vector<std::function<int()>> sections = { section_1, section_2, section_3, section_4, section_5,
-                                                         section_6, section_7, section_8, section_9 };
+                                                         section_6, section_7, section_8, section_9, section_10 };
 
     auto args = std::span(argv, std::size_t(argc));
 

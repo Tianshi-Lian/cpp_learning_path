@@ -1,7 +1,9 @@
 #include <cstdlib>
 #include <iostream>
 
-int main() {
+int
+main()
+{
 
     // ! 2.3.1
     {
@@ -10,13 +12,13 @@ int main() {
         // int &relVal2; // Err: must be initialized
         refVal = 2;
         int ii = refVal;
-        int& refVal3 = refVal;   // Gets bound to ival
-        int i = refVal;          // Initialised to the value of ival
+        int& refVal3 = refVal; // Gets bound to ival
+        int i = refVal;        // Initialised to the value of ival
 
-        int x = 1024, x2 = 2048;   // both int objects
-        int &r = x, r2 = x2;       // r is ref to x object
-        int x3 = 1024, &rx = x3;   // x3 is int object, rx is ref to x3
-        int &r3 = x3, &r4 = x2;    // r3 is ref to x3 object, r4 is ref to x2 object
+        int x = 1024, x2 = 2048; // both int objects
+        int &r = x, r2 = x2;     // r is ref to x object
+        int x3 = 1024, &rx = x3; // x3 is int object, rx is ref to x3
+        int &r3 = x3, &r4 = x2;  // r3 is ref to x3 object, r4 is ref to x2 object
 
         // int &refVal4 = 10; // Err: must refer to an object
         double dval = 3.14;
@@ -57,11 +59,11 @@ int main() {
 
     // ! 2.3.2
     {
-        int *ip1, *ip2;    // two pointers to int
-        double dp, *dp2;   // dp2 is pointer to double
+        int *ip1, *ip2;  // two pointers to int
+        double dp, *dp2; // dp2 is pointer to double
 
         int ival = 42;
-        int* p = &ival;   // p holds the address of ival to "point" to ival
+        int* p = &ival; // p holds the address of ival to "point" to ival
 
         double dval;
         double* pd = &dval;
@@ -84,11 +86,11 @@ int main() {
     }
     {
         int i = 42;
-        int* pi = 0;     // initialized but addresses no object
-        int* pi2 = &i;   // initialized and holds address of i
-        int* pi3;        // unitialized within block scope
-        pi3 = pi2;       // pi3 and pi2 address the same object (i)
-        pi2 = 0;         // pi2 now addresses no object (but pi3 still does)
+        int* pi = 0;   // initialized but addresses no object
+        int* pi2 = &i; // initialized and holds address of i
+        int* pi3;      // unitialized within block scope
+        pi3 = pi2;     // pi3 and pi2 address the same object (i)
+        pi2 = 0;       // pi2 now addresses no object (but pi3 still does)
     }
     {
         int ival = 1024;
@@ -103,8 +105,8 @@ int main() {
     }
     {
         double obj = 3.14, *pd = &obj;
-        void* pv = &obj;   // obj can be any type
-        pv = pd;           // pv can hold a pointer to any type
+        void* pv = &obj; // obj can be any type
+        pv = pd;         // pv can hold a pointer to any type
     }
     std::cout << std::endl << std::endl;
 
@@ -172,8 +174,8 @@ int main() {
     {
         int i = 1024, *pi = &i, &ri = i;
 
-        int** ppi = &pi;      // pointer to a pointer to i
-        int*** pppi = &ppi;   // pointer to a pointer to a pointer to i
+        int** ppi = &pi;    // pointer to a pointer to i
+        int*** pppi = &ppi; // pointer to a pointer to a pointer to i
 
         std::cout << "The value of i:\n"
                   << "direct: " << i << "\n"
@@ -182,10 +184,10 @@ int main() {
     }
     {
         int i = 42;
-        int* p;         // pointer
-        int *&r = p;    // reference to a pointer
-        r = &i;         // r is reference to a pointer so this makes p point to i
-        *r = 0;         // deferencing the reference works as expected and changes i
+        int* p;      // pointer
+        int*& r = p; // reference to a pointer
+        r = &i;      // r is reference to a pointer so this makes p point to i
+        *r = 0;      // deferencing the reference works as expected and changes i
     }
     std::cout << std::endl << std::endl;
 

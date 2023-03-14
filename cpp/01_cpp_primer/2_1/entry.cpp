@@ -1,6 +1,8 @@
 #include <iostream>
 
-int main() {
+int
+main()
+{
 
     // ! 2.1.1
 
@@ -29,16 +31,16 @@ int main() {
 
     // ! 2.1.2
     {
-        bool b = 42;            // b is true
-        int i = b;              // i == 1
-        i = 3.14;               // i == 3
-        double pi = i;          // pi == 3.0
-        unsigned char c = -1;   // c == 255
-        signed char c2 = 256;   // c2 == undefined
+        bool b = 42;          // b is true
+        int i = b;            // i == 1
+        i = 3.14;             // i == 3
+        double pi = i;        // pi == 3.0
+        unsigned char c = -1; // c == 255
+        signed char c2 = 256; // c2 == undefined
 
         int num = 42;
         if (num) // condition will be true as value converted to bool (non-0 is true)
-            num  = 0;
+            num = 0;
 
         unsigned u = 10;
         int v = -42;
@@ -91,7 +93,8 @@ int main() {
         // 'a'.length = 1     "a".length == 2
         std::cout << "A really, really long string literal can "
                      "be split across multiple lines and each line"
-                     " will be concatenated into a single literal." << std::endl;
+                     " will be concatenated into a single literal."
+                  << std::endl;
         std::cout << '\a';
         std::cout << '\n';
         std::cout << "\tHi!\n";

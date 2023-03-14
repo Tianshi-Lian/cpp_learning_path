@@ -2,7 +2,9 @@
 
 #include "vendor/sales_item.h"
 
-int main() {
+int
+main()
+{
     // Exercise 1.25
 
     Sales_Item total;

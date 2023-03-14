@@ -1,7 +1,9 @@
 #include <iostream>
 #include <string>
 
-int main() {
+int
+main()
+{
 
     // ! 2.6.1
     {
@@ -69,7 +71,8 @@ int main() {
                 if (item.isbn == total.isbn) {
                     total.revenue += item.revenue;
                     total.units_sold += item.units_sold;
-                } else {
+                }
+                else {
                     std::cout << "ISBN: " << total.isbn << " Sold: " << total.units_sold << " Revenue: " << total.revenue
                               << std::endl;
 
@@ -87,11 +90,10 @@ int main() {
     // ! 2.6.3
     // Exercise 2.42
     {
-        #include "sales_item.h"
+#include "sales_item.h"
 
         // literally a copy and paste of L#47-L#83.
     }
-
 
     return 0;
 }

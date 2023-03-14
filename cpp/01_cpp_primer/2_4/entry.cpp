@@ -1,22 +1,28 @@
 #include <iostream>
 
 // * This isn't taught yet but here for compilation.
-int get_size() { return 128; }
+int
+get_size()
+{
+    return 128;
+}
 
-int main() {
+int
+main()
+{
 
     // ! 2.4.0
     {
         const int buffer_size = 512;
         // buffer_size = 12; // error: object is marked as const
 
-        const int i = get_size();   // valid: initialized at run time
-        const int j = 432;          // valid: initialized at compile time
+        const int i = get_size(); // valid: initialized at run time
+        const int j = 432;        // valid: initialized at compile time
         // const int k;             // error: const must be initialized
 
         int i2 = 10;
-        const int ci = i2;   // valid: value of i2 is copied
-        int x = ci;          // valid: value oconst ci is copied
+        const int ci = i2; // valid: value of i2 is copied
+        int x = ci;        // valid: value oconst ci is copied
     }
 
     // Exercise 2.26
@@ -37,43 +43,43 @@ int main() {
     // ! 2.4.1
     {
         const int ci = 1024;
-        const int& ri = ci;   // valid: boht reference and object are const
+        const int& ri = ci; // valid: boht reference and object are const
         // r1 = 42;           // error: r1 is a reference to const
         // int& r2 = ci;      // error: non const reference to a const object
 
         int i = 42;
-        const int& r1 = i;        // valid: const ref to an int object
-        const int& r2 = 42;       // valid: const ref
-        const int& r3 = r1 * 2;   // valid: const ref to result of expression
+        const int& r1 = i;      // valid: const ref to an int object
+        const int& r2 = 42;     // valid: const ref
+        const int& r3 = r1 * 2; // valid: const ref to result of expression
 
         double dval = 3.14;
-        const int& rd = dval;   // valid: binds to an unnamed, temp object used to store int-double conversion
+        const int& rd = dval; // valid: binds to an unnamed, temp object used to store int-double conversion
 
         // Explanation.
         double dexample = 3.14;
-        const int temp = dexample;   // this is hidden from the programmer as it's implementation details, this stores
-        const int& ref = temp;       // the conversion from double to int, and then this is referenced by the const ref
+        const int temp = dexample; // this is hidden from the programmer as it's implementation details, this stores
+        const int& ref = temp;     // the conversion from double to int, and then this is referenced by the const ref
     }
 
     // ! 2.4.2
     {
         const double pi = 3.14;
         // double* ptr = &pi;       // error: pointer must be marked as pointer to const to hold const value
-        const double* cptr = &pi;   // valid: pointer is marked as pointer to const
+        const double* cptr = &pi; // valid: pointer is marked as pointer to const
         // *cptr = 5.5;             // error: cannot change a const value being pointer at
 
-        double dval = 3.14;   // mutable double object
-        cptr = &dval;         // valid: but can't change dval through this pointer
+        double dval = 3.14; // mutable double object
+        cptr = &dval;       // valid: but can't change dval through this pointer
 
         int error_code = 0;
-        int* const current_error = &error_code;   // current_error will always point to error_code
+        int* const current_error = &error_code; // current_error will always point to error_code
         const double pi2 = 3.14159;
-        const double* const pip = &pi;   // pip is a const pointer to a const object
+        const double* const pip = &pi; // pip is a const pointer to a const object
 
         // *pip = 2.72;    // error: pip in a pointer to const
         if (*current_error) {
             std::cout << "Error: message" << std::endl;
-            *current_error = 0;   // valid: underlying error_code is mutable so we can modify through const pointer
+            *current_error = 0; // valid: underlying error_code is mutable so we can modify through const pointer
         }
     }
 
@@ -181,15 +187,15 @@ int main() {
 
     // ! 2.4.4
     {
-        const int* p = nullptr;       // pointer to a const int
-        constexpr int* q = nullptr;   // const pointer to int
+        const int* p = nullptr;     // pointer to a const int
+        constexpr int* q = nullptr; // const pointer to int
 
         // * "static" is not taught yet, but this is easier/better than adding single examples to global scope
         static int j = 0;
-        constexpr static int i = 42;   // const int object
+        constexpr static int i = 42; // const int object
 
-        constexpr const int* p1 = &i;   // constant pointer to the const int i
-        constexpr int* p2 = &j;         // constant pointer to int j
+        constexpr const int* p1 = &i; // constant pointer to the const int i
+        constexpr int* p2 = &j;       // constant pointer to int j
     }
 
     // Exercise 2.4.4

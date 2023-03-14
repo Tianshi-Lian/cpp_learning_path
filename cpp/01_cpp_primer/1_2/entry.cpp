@@ -1,7 +1,9 @@
 #include <iostream>
 #include <ostream>
 
-int main() {
+int
+main()
+{
     // Book
     std::cout << "Enter two numbers:" << std::endl;
     int value_1 = 0, value_2 = 0;

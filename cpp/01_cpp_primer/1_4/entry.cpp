@@ -1,6 +1,8 @@
 #include <iostream>
 
-int main() {
+int
+main()
+{
     // 1.4.1
     int sum = 0, value = 1;
     while (value <= 10) {
@@ -112,7 +114,7 @@ int main() {
     }
     std::cout << "The sum of your input is " << sum_3 << std::endl;
 
-    std::cin.clear();   // this "technically" isn't learned yet, but needed for single file.
+    std::cin.clear(); // this "technically" isn't learned yet, but needed for single file.
     std::cout << std::endl << std::endl;
 
     // Exercise 1.16
@@ -134,7 +136,8 @@ int main() {
         while (std::cin >> value_4) {
             if (value_4 == current_value) {
                 ++count;
-            } else {
+            }
+            else {
                 std::cout << current_value << " occurs " << count << " times" << std::endl;
                 current_value = value_4;
                 count = 1;

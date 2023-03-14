@@ -2,13 +2,17 @@
 #include <string>
 
 // * This isn't taught yet but is here to ensure compilation.
-double apply_discount(double price, double discount) {
+double
+apply_discount(double price, double discount)
+{
     return price - discount;
 }
 
 int global_var = 42;
 
-int main() {
+int
+main()
+{
 
     // ! 2.2.1
     {
@@ -19,9 +23,9 @@ int main() {
         double sale_price = apply_discount(price, discount);
 
         int init_1 = 0;
-        int init_2 = {0};
+        int init_2 = { 0 };
         int init_3(0);
-        int init_4{0};
+        int init_4{ 0 };
 
         long double ld = 3.1415926536;
         // int a{ld}, b = {ld}; // You can't use a list initializer with narrowing types
@@ -29,7 +33,6 @@ int main() {
 
         std::string str;
         std::cout << str << std::endl; // ""
-
     }
     std::cout << std::endl << std::endl;
 
@@ -61,7 +64,6 @@ int main() {
     }
     */
 
-
     // ! 2.2.2
 
     // Exercise 2.11
@@ -75,7 +77,6 @@ int main() {
     (c) extern int iz;
     Declaration as this has no initialization and is marked as extern.
     */
-
 
     // ! 2.2.3
     {
@@ -102,7 +103,6 @@ int main() {
     (e) double Double = 3.14;
     Valid, variables names are case-sensitive.
     */
-
 
     // ! 2.2.4
     {

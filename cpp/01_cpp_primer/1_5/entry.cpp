@@ -2,7 +2,9 @@
 
 #include "vendor/sales_item.h"
 
-int main() {
+int
+main()
+{
     // This used a fixed number of reads to allow us to run all the code here in one go.
     // If we used a `while` like the book we could only run one exercise at a time due
     // to the fact it would read until the end of our input file on the first run.

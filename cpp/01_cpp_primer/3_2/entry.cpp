@@ -106,5 +106,76 @@ main()
         std::cout << output_spaced << std::endl;
     }
 
+    using namespace std;
+
+    /**
+     * Exercise 3.6
+     */
+    {
+        string input = "my_string";
+        for (auto& l : input) {
+            l = toupper(l);
+        }
+    }
+
+    /**
+     * Exercise 3.7
+     * a) nothing
+     */
+    {
+        string input = "my_string";
+        for (char& l : input) {
+            l = toupper(l);
+        }
+    }
+
+    /**
+     * Exercise 3.8
+     *
+     * range for > for > while
+     * brevity and readability
+     */
+    {
+        string input = "my_string";
+        string::size_type index = 0;
+        while (index < input.size()) {
+            input[index] = toupper(input[index]);
+            ++index;
+        }
+
+        for (index = 0; index < input.size(); ++index) {
+            input[index] = toupper(input[index]);
+        }
+    }
+
+    /**
+     * Exercise 3.9
+     *
+     * Outputs the first character of the string s.
+     * This will compile but the behaviour is undefined as it's accessing an uninitialized index.
+     *
+     */
+    {
+        string s;
+        cout << s[0] << endl;
+    }
+
+    /**
+     * Exercise 3.10
+     */
+    {
+        char in;
+        while (cin >> in) {
+            if (!ispunct(in)) {
+                cout << in;
+            }
+        }
+    }
+
+    /**
+     * Exercise 3.11
+     * Yes, c would be a const
+     */
+
     return 0;
 }
